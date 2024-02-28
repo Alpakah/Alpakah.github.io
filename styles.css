@@ -18,20 +18,22 @@ body {
     padding: 0;
 }
 
+/* Style the navigation bar */
 nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100px;
-    padding: 10px 90px;
+    padding: 10px 20px;
     box-sizing: border-box;
     background: rgba(0, 0, 0, 0.6);
     border-bottom: 1px solid #fff;
 }
 
+/* Style the logo in the top left of the navbar */
 nav .logo {
-    padding: 22px 20px;
+    padding: 22px 5px;
     height: 90px;
     float: left;
     font-size: 24px;
