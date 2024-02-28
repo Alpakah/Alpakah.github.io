@@ -27,10 +27,20 @@ margin: 0;
 
 /* Header for Home Page */
 .header-home {
-padding: 80px;
-text-align: center;
-background: #1abc9c;
-color: white;
+    background-image: url(/images/Alex_RoyceLeanGray.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+
+    height: 100vh;
+    width: auto;
+    padding: 30vh 10px;
+    border-width: 100vh 100vw;
+    text-align: center;
+    z-index: -1;
+
+    color: white;
 }
 
 /* Increase the font size of the heading */
