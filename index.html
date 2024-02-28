@@ -13,35 +13,53 @@
 
     <!-- Setting the viewport to make your website look good on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Define the character set used -->
     <meta charset="UTF-8">
-
-    <!-- Link to Style Sheet -->
-    <link rel="stylesheet" href="styles.css">
-
-    <!-- Link to Javascript Sheet -->
-    <script src="script.js"></script>
-
     <!-- Author of the HTML code -->
     <meta name="author" content="Alexander Pak">
 
-    <!-- Favicon Icon that shows on tab -->
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Link to Generic Style Sheet -->
+    <link rel="stylesheet" href="\css\styles.css">
+    <!-- Link to Navbar Style Sheet -->
+    <link rel="stylesheet" href="\css\navbar.css">
+
+    <!-- Link to Javascript Sheet -->
+    <script src="script.js"></script>
+    <!-- Import jQuery -->
+    <script src="jquery-3.7.1.min.js"></script>
     
     <!-- Title of the Website that shows on tab -->
     <title>Alexander Pak Portfolio</title>
-    
+    <!-- Favicon Icon that shows on tab -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <!-- Description that shows up in google search -->
     <meta name="description" content="Alexander Pak Portfolio Website">
 
 </head>
 <body>
 
-    <nav class="navbar">
+    <nav id="nav-bar">
         
+        <!-- separate div for hamburger menu --> 
+        <div>
+            <label class="hamburger-menu">
+                <input type="checkbox"/>
+            </label>
+            <aside class="sidebar">
+                <nav>
+                    <div>This</div>
+                    <div>Is</div>
+                    <div>The</div>
+                    <div>Sidebar</div>
+                </nav>
+            </aside>
+        </div>
+
         <!-- Logo in the top left -->
-        <div class="logo">Alexander Pak</div>
+        <a href="#" class="logo">Alexander Pak</a>
+
+        <!-- Empty div for space between logo and search --> 
+        <div></div>
 
         <!-- Navigation bar on top right --> 
         <ul>
@@ -94,5 +112,19 @@
     <h2>Footer</h2>
     </div>
 
+    <script>
+        let lastScrollTop = 0;
+        navbar = document.getElementById("nav-bar");
+        window.addEventListener("scroll", changeNavbar);
+
+        function changeNavbar(){
+            if ($(window).scrollTop() > 0) {
+                navbar.style.backgroundColor = "#282727FF";
+            }
+            else {
+                navbar.style.backgroundColor = "#28272700";
+            }
+        }
+    </script>
 </body>
 </html>

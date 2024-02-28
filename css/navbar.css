@@ -1,0 +1,172 @@
+/* 
+    CSS Style Sheet for Alexander Pak Portfolio Website 
+*/
+
+/* Blank Comment Below */
+/*  */
+
+/* CSS Universal Selector */
+/* Formats ALL HTML elements (before others overwrite it */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Root Selector */
+/* Creates global variables for this CSS Sheet */
+:root {
+    --nav-height: 100px;
+    --bar-height: 10px;
+    --bar-width: calc(var(--bar-height) * 5);
+    --hamburger-gap: var(--bar-height);
+    --hamburger-margin: 10px;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --animation-timing: 200ms ease-in-out;
+}
+
+/* Style the navigation bar */
+#nav-bar {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: var(--nav-height);
+    box-sizing: border-box;
+
+    display: inline-grid;
+    grid-template-columns: var(--nav-height) 30vw auto 50vw;
+
+    /* background when scroll is in the top */
+    background: linear-gradient(to bottom, #000000, #00000090, #0000); 
+    
+    /* control how smooth the background changes */
+    transition: background .5s;
+}
+
+/* Style the logo in the top left of the navbar */
+nav .logo {
+    padding: 10px 15px;
+    font-size: 3vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+    background: red;
+}
+
+nav .logo:hover {
+    background: #00000070;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    background: blue;
+}
+
+nav ul li a {
+    line-height: 80px;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 2vw;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: gray;
+}
+
+nav ul li a:hover {
+    background: #00000070;
+    border-radius: 6px;
+    transition: 0.5s;
+}
+
+/*
+    Style the hamburger menu
+*/
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+
+    background: green;
+    width: max-content;
+    position: absolute;
+    margin: var(--hamburger-margin);
+    z-index: 2;
+    cursor: pointer;
+
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+}
+
+/* Setup hamburger menu with bars before and after the checkbox */
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: #FFF;
+    border-radius: 9999px;
+
+    /* Animation settings */
+    transition: opacity var(--animation-timing), width var(--animation-timing);
+    transform-origin: center;
+}
+
+/* Hide all the properties of the checkbox to make it appear like the bars before and after it */
+.hamburger-menu input {
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+/* Style the hamburger menu when it is clicked/checked */
+.hamburger-menu input:checked {
+    background: red;
+    opacity: 0;
+    width: 0;;
+}
+
+/* Determine the shape of the hamburger menu after it transforms to X */
+.hamburger-menu:has(input:checked)::before {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburger-menu:has(input:checked)::after {
+    rotate: 315deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2);
+}
+
+.sidebar {
+    color: black;
+    background: yellow;
+
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    max-width: 10rem;
+    min-height: 100vh;
+
+    transition: translate var(--animation-timing);
+    translate: -100%;
+}
+
+.hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+}
