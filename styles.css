@@ -1,4 +1,6 @@
-/* CSS Style Sheet for Alexander Pak Portfolio Website */
+/* 
+    CSS Style Sheet for Alexander Pak Portfolio Website 
+*/
 
 /* Blank Comment Below */
 /*  */
@@ -11,8 +13,10 @@ a:hover {
     text-decoration: underline;
   }
 
+/* CSS Universal Selector */
+/* Formats ALL HTML elements (before others overwrite it */
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Style the body */
@@ -21,8 +25,8 @@ font-family: Arial, Helvetica, sans-serif;
 margin: 0;
 }
 
-/* Header/logo Title */
-.header {
+/* Header for Home Page */
+.header-home {
 padding: 80px;
 text-align: center;
 background: #1abc9c;
