@@ -25,13 +25,12 @@ body {
 .header-home {
     background-image: url(/images/Alex_Royce.png);
     background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: inherit;
+    background-position: center top;
     background-size: cover;
 
     color: white;
     text-align: center;
-    text-shadow: 3px 3px 5px #000000;
+    text-shadow: 0.3rem 0.3rem 0.5rem #000000;
 
     height: 100vh;
     width: auto;
