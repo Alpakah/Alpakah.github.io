@@ -7,7 +7,7 @@
 /* Blank Comment Below */
 /*  */
 
-/* Root Selector */
+/* ROOT SELECTOR */
 /* Creates global variables for this CSS Sheet */
 :root {
     --nav-height: 60px;
@@ -18,13 +18,10 @@
     --hamburger-margin: calc((var(--nav-height) - var(--bar-width)) / 2);
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
 
-    --animation-timing: 500ms;
-
-    --fg-color: ;
     --bg-color: #111111;
 }
 
-/* Style the navigation bar */
+/* GENERAL NAV BAR */
 #nav-bar {
     position: fixed;
     top: 0;
@@ -32,6 +29,7 @@
     height: var(--nav-height);
     box-sizing: border-box;
     text-align: center;
+    z-index: 3;
 
     display: grid;
     grid-template-rows: var(--nav-height) auto;
@@ -41,16 +39,20 @@
     background: linear-gradient(to bottom, #111111FF, #11111130, #11111100);
 }
 
+/* LOGO */
 /* Style the logo in the top left of the navbar */
 nav .logo {
+    margin: auto auto auto 0;
+    padding: 10px;
+    z-index: 4;
+
     font-size: 100%;
     font-weight: bold;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
     text-align: left;
     text-decoration: none;
     color: #FFFFFF;
-    margin: auto auto auto 0;
-    padding: 10px;
 }
 
 /* Make logo transparent when hovering over it */
@@ -60,31 +62,7 @@ nav .logo:hover {
     transition: 0.5s;
 }
 
-/* Obsolete? */
-nav ul {
-    list-style: none;
-    background: blue;
-}
-
-/* Obsolete? */
-nav ul li a {
-    color: #FFFFFF;
-    margin: auto;
-    padding: 3px 5px;
-    text-decoration: none;
-    font-size: 5vw;
-    font-weight: bold;
-    text-transform: uppercase;
-    background: gray;
-}
-
-/* Obsolete? */
-nav ul li a:hover {
-    background: #00000070;
-    border-radius: 5px;
-    transition: 0.5s;
-}
-
+/* HAMBURGER MENU */
 /*Style the hamburger menu*/
 .hamburger-menu {
     display: flex;
@@ -93,7 +71,7 @@ nav ul li a:hover {
 
     width: max-content;
     margin: var(--hamburger-margin);
-    z-index: 2;
+    z-index: 4;
     cursor: pointer;
 }
 
@@ -109,7 +87,7 @@ nav ul li a:hover {
 
     /* Animation settings */
     transform-origin: center;
-    transition: transform var(--animation-timing) cubic-bezier(0.23, 1, 0.32, 1);
+    transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Hide all the properties of the checkbox to make it appear like the bars before and after it */
@@ -141,33 +119,71 @@ nav ul li a:hover {
     translate: calc((var(--x-width) - var(--bar-width)) / -2) calc(var(--bar-height) * -2);
 }
 
+/* style sidebar and keep it hidden until clicked */
 .sidebar {
     position: absolute;
     float: left;
     top: 0;
-    background: #232323;
+    background: linear-gradient(to right, #111111FF, #111111FF, #11111100);
 
     color: white;
     text-align: left;
     text-transform: uppercase;
+    letter-spacing: 0.2rem;
 
-    padding: 1rem 5rem 1rem 1rem;
+    margin: 0;
+    padding: 0;
     padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-    min-width: 15rem;
-    min-height: 100vh;
+    min-width: 17rem;
+    min-height: 500vh;
 
-    transition: translate var(--animation-timing);
+    transition: 1s ease-out;
     translate: -100%;
-    z-index: -1;
+    z-index: 2;
 }
 
-.sidebar div {
-    padding: 1rem 0;
+/* format sidebar links */
+.sidebar a {
+    margin: 0 10rem 0 0;
+    padding: 0.5rem 1rem;
+    display: block;
+
+    text-decoration: none;
+    color: white;
 }
 
+/* Make sidebar links transparent when hovering over them */
+.sidebar a:hover {
+    background: #000000FF;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+/* Move out sidebar after hamburger is clicked */
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;
 }
 
 /* SEARCH BAR */
 
+
+/* PAGE DIM */
+#page-dim {
+    position: fixed;
+    width: 500vw;
+    height: 500vh;
+    z-index: 0;
+    background-color: #111111;
+
+    /* This value will be changed when sidebar opens */
+    opacity: 0;
+
+    /* Determine how fast the dimmed background comes in */
+    transition: 1s linear;
+}
+
+/* Dim main page when sidebar opens */
+.hamburger-menu:has(input:checked) ~ #page-dim {
+    translate: 0;
+    opacity: 0.7;
+}
