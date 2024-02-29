@@ -23,10 +23,8 @@
     <!-- Link to Navbar Style Sheet -->
     <link rel="stylesheet" href="\css\navbar.css">
 
-    <!-- Link to Javascript Sheet -->
-    <script src="script.js"></script>
     <!-- Import jQuery -->
-    <script src="jquery-3.7.1.min.js"></script>
+    <script src="\js\jquery-3.7.1.min.js"></script>
     
     <!-- Title of the Website that shows on tab -->
     <title>Alexander Pak Portfolio</title>
@@ -36,7 +34,7 @@
     <meta name="description" content="Alexander Pak Portfolio Website">
 
 </head>
-<body>
+<body id="body">
 
     <nav id="nav-bar">
         
@@ -107,21 +105,8 @@
     <h2>Footer</h2>
     </div>
 
-    <script>
-        let lastScrollTop = 0;
-        navbar = document.getElementById("nav-bar");
-        window.addEventListener("scroll", changeNavbar);
+    <!-- Link to Javascript Sheet -->
+    <script src="\js\script.js"></script>
 
-        function changeNavbar(){
-            if ($(window).scrollTop() > 0) {
-                navbar.style.backgroundColor = "#282727FF";
-                navbar.style.transition = "1s";
-            }
-            else {
-                navbar.style.backgroundColor = "#28272700";
-                navbar.style.transition = "1s";
-            }
-        }
-    </script>
 </body>
 </html>
