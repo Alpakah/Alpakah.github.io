@@ -8,11 +8,11 @@ window.addEventListener("scroll", changeNavbar);
 
 function changeNavbar(){
     if ($(window).scrollTop() > 0) {
-        navbar.style.backgroundColor = "#282727FF";
+        navbar.style.backgroundColor = "#111111FF";
         navbar.style.transition = "1s";
     }
     else {
-        navbar.style.backgroundColor = "#28272700";
+        navbar.style.backgroundColor = "#11111100";
         navbar.style.transition = "1s";
     }
 }

@@ -21,6 +21,18 @@ body {
     padding: 0;
 }
 
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+main {
+    scroll-snap-type: y proximity;
+    overflow: auto;
+    align-items: center;
+}
+
 /* Header for Home Page */
 .header-home {
     background-image: url(/images/Alex_Royce.png);
@@ -39,7 +51,7 @@ body {
     border-width: 100vh 100vw;
     z-index: -1;
 
-    scroll-snap-type: y;
+    scroll-snap-align: start;
 }
 
 /* Increase the font size of the heading */
@@ -55,35 +67,14 @@ body {
 }
 
 /* Column container */
-.row {  
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
+.center-column {
+    display: grid;
+    grid-template-columns: auto 70vw auto;
 }
 
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-    -ms-flex: 30%; /* IE10 */
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-}
-
-/* Main column */
-.main {   
-    -ms-flex: 70%; /* IE10 */
-    flex: 70%;
-    background-color: white;
-    padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-    background-color: #aaa;
-    width: 100%;
-    padding: 20px;
+.main-section {
+    font-size: 1.2rem;
+    padding: 1.5rem 0;
 }
 
 /* Footer */
