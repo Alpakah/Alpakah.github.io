@@ -40,8 +40,8 @@
 
     <nav id="nav-bar">
         
-        <!-- separate div for hamburger menu --> 
-        <div>
+        <!-- Div to capture hamburger and sidebar in same grid space --> 
+        <div class="hamburger-grid">
             <label class="hamburger-menu">
                 <input type="checkbox"/>
             </label>
@@ -56,23 +56,20 @@
         </div>
 
         <!-- Logo in the top left -->
-        <a href="#" class="logo">Alexander Pak</a>
-
-        <!-- Empty div for space between logo and search --> 
-        <div></div>
+        <a href="/" class="logo">Alexander Pak</a>
 
         <!-- Navigation bar on top right --> 
-        <ul>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <div class="search">
+            <div class="search-icon">
+                <input type="text" class="input">
+            </div>
+        </div>
 
     </nav>
 
     <section></section>
 
-    <header class="header-home">
+    <header id="home-page" class="header-home">
 
         <h1>🗿ALEXANDER PAK🗿</h1>
         <p>A PORTFOLIO MADE FROM SCRATCH</p>
@@ -120,9 +117,11 @@
         function changeNavbar(){
             if ($(window).scrollTop() > 0) {
                 navbar.style.backgroundColor = "#282727FF";
+                navbar.style.transition = "1s";
             }
             else {
                 navbar.style.backgroundColor = "#28272700";
+                navbar.style.transition = "1s";
             }
         }
     </script>

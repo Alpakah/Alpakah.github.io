@@ -23,13 +23,18 @@ body {
 /* Root Selector */
 /* Creates global variables for this CSS Sheet */
 :root {
-    --nav-height: 100px;
-    --bar-height: 10px;
+    --nav-height: 60px;
+    --bar-height: calc(var(--nav-height) / 10);
     --bar-width: calc(var(--bar-height) * 5);
     --hamburger-gap: var(--bar-height);
-    --hamburger-margin: 10px;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-    --animation-timing: 200ms ease-in-out;
+    --hamburger-margin: calc((var(--nav-height) - var(--bar-width)) / 2);
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+    --animation-timing: 500ms;
+
+    --foreground: #333;
+    --background: #FFF;
 }
 
 /* Style the navigation bar */
@@ -39,47 +44,45 @@ body {
     width: 100vw;
     height: var(--nav-height);
     box-sizing: border-box;
+    text-align: center;
 
-    display: inline-grid;
-    grid-template-columns: var(--nav-height) 30vw auto 50vw;
+    display: grid;
+    grid-template-rows: var(--nav-height) auto;
+    grid-template-columns: var(--nav-height) auto var(--nav-height);
 
     /* background when scroll is in the top */
-    background: linear-gradient(to bottom, #000000, #00000090, #0000); 
-    
-    /* control how smooth the background changes */
-    transition: background .5s;
+    background: linear-gradient(to bottom, #000000, #00000090, #0000);
 }
 
 /* Style the logo in the top left of the navbar */
 nav .logo {
-    padding: 10px 15px;
-    font-size: 3vw;
+    font-size: 100%;
     font-weight: bold;
     text-transform: uppercase;
-    color: #FFFFFF;
+    text-align: left;
     text-decoration: none;
-    background: red;
+    color: #FFFFFF;
+    margin: auto auto auto 0;
+    padding: 3px 5px;
 }
 
 nav .logo:hover {
     background: #00000070;
-    border-radius: 6px;
+    border-radius: 5px;
     transition: 0.5s;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    display: flex;
     background: blue;
 }
 
 nav ul li a {
-    line-height: 80px;
     color: #FFFFFF;
-    padding: 10px 15px;
+    margin: auto;
+    padding: 3px 5px;
     text-decoration: none;
-    font-size: 2vw;
+    font-size: 5vw;
     font-weight: bold;
     text-transform: uppercase;
     background: gray;
@@ -87,27 +90,27 @@ nav ul li a {
 
 nav ul li a:hover {
     background: #00000070;
-    border-radius: 6px;
+    border-radius: 5px;
     transition: 0.5s;
 }
 
 /*
     Style the hamburger menu
 */
+.hamburger-grid {
+    background: none;
+}
+
 
 .hamburger-menu {
     display: flex;
     flex-direction: column;
     gap: var(--hamburger-gap);
 
-    background: green;
     width: max-content;
-    position: absolute;
     margin: var(--hamburger-margin);
     z-index: 2;
     cursor: pointer;
-
-    --x-width: calc(var(--hamburger-height) * 1.41421356237);
 }
 
 /* Setup hamburger menu with bars before and after the checkbox */
@@ -117,12 +120,12 @@ nav ul li a:hover {
     content: "";
     width: var(--bar-width);
     height: var(--bar-height);
-    background-color: #FFF;
+    background-color: var(--background);
     border-radius: 9999px;
 
     /* Animation settings */
-    transition: opacity var(--animation-timing), width var(--animation-timing);
     transform-origin: center;
+    transition: transform var(--animation-timing) cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* Hide all the properties of the checkbox to make it appear like the bars before and after it */
@@ -136,37 +139,51 @@ nav ul li a:hover {
 
 /* Style the hamburger menu when it is clicked/checked */
 .hamburger-menu input:checked {
-    background: red;
     opacity: 0;
     width: 0;;
+    transition: 500ms;
 }
 
 /* Determine the shape of the hamburger menu after it transforms to X */
 .hamburger-menu:has(input:checked)::before {
-    rotate: -45deg;
+    transform: rotate(405deg);
     width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2);
+    translate: calc((var(--x-width) - var(--bar-width)) / -2) calc(var(--bar-height) * 2);
 }
 
 .hamburger-menu:has(input:checked)::after {
-    rotate: 315deg;
+    transform: rotate(-405deg);
     width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -2);
+    translate: calc((var(--x-width) - var(--bar-width)) / -2) calc(var(--bar-height) * -2);
 }
 
 .sidebar {
-    color: black;
-    background: yellow;
+    position: absolute;
+    float: left;
+    top: 0;
+    background: #232323;
 
-    padding: 0.5rem 1rem;
+    color: white;
+    text-align: left;
+    text-transform: uppercase;
+
+    padding: 1rem 5rem 1rem 1rem;
     padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-    max-width: 10rem;
+    min-width: 15rem;
     min-height: 100vh;
 
     transition: translate var(--animation-timing);
     translate: -100%;
+    z-index: -1;
+}
+
+.sidebar div {
+    padding: 1rem 0;
 }
 
 .hamburger-menu:has(input:checked) + .sidebar {
     translate: 0;
 }
+
+/* SEARCH BAR */
+
