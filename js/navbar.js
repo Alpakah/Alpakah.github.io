@@ -1,5 +1,7 @@
 /* 
     Javascript Sheet
+
+    Navigation Bar for alexanderpak.com
 */
 
 // JS: Navbar turns solid after scrolling from top

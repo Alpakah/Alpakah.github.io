@@ -18,7 +18,9 @@
     --hamburger-margin: calc((var(--nav-height) - var(--bar-width)) / 2);
     --x-width: calc(var(--hamburger-height) * 1.41421356237);
 
-    --bg-color: #111111;
+    --bg-color: #222222;
+
+    --icon-size: 1.2rem;
 }
 
 /* GENERAL NAV BAR */
@@ -33,10 +35,10 @@
 
     display: grid;
     grid-template-rows: var(--nav-height) auto;
-    grid-template-columns: var(--nav-height) auto var(--nav-height);
+    grid-template-columns: var(--nav-height) auto;
 
     /* background when scroll is in the top */
-    background: linear-gradient(to bottom, #111111FF, #11111130, #11111100);
+    background: linear-gradient(to bottom, #222222FF, #22222230, #22222200);
 }
 
 /* LOGO */
@@ -164,9 +166,6 @@ nav .logo:hover {
     translate: 0;
 }
 
-/* SEARCH BAR */
-
-
 /* PAGE DIM */
 #page-dim {
     position: fixed;
@@ -175,11 +174,12 @@ nav .logo:hover {
     z-index: 0;
     background-color: #111111;
 
-    /* This value will be changed when sidebar opens */
+    /* These values will be changed when sidebar opens */
+    translate: -100%;
     opacity: 0;
 
     /* Determine how fast the dimmed background comes in */
-    transition: 1s linear;
+    transition: 0.5s ease;
 }
 
 /* Dim main page when sidebar opens */

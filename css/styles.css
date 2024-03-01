@@ -47,9 +47,7 @@ main {
 
     height: 100vh;
     width: auto;
-    margin: auto;
     padding: 40vh 0;
-    border-width: 100vh 100vw;
     z-index: -1;
 
     scroll-snap-align: start;
@@ -78,6 +76,29 @@ main {
 .main-section {
     font-size: 1.2rem;
     padding: 1.5rem 0;
+}
+
+.picture-subtitle {
+    margin: auto;
+    padding: auto;
+    text-align: center;
+}
+
+.picture-subtitle p {
+    margin: 0;
+    padding: 1rem;
+
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 0.3rem;;
+}
+
+.picture-subtitle-image {
+    margin: auto;
+    padding: auto;
+    position: center;
+    max-width: 100%;
 }
 
 /* Footer */
