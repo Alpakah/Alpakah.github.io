@@ -18,3 +18,12 @@ function changeNavbar(){
         navbar.style.transition = "1s";
     }
 }
+
+// Close sidebar when rest of mainbody is clicked
+function hideSidebar() {
+    document.getElementById("hamburger-check").checked = false;
+}
+
+document.getElementById("page-dim").addEventListener("click", hideSidebar);
+
+

@@ -27,7 +27,7 @@
 #nav-bar {
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 500vw;
     height: var(--nav-height);
     box-sizing: border-box;
     text-align: center;
@@ -57,7 +57,7 @@ nav .logo {
     color: #FFFFFF;
 }
 
-/* Make logo transparent when hovering over it */
+/* Make logo background darker when hovered */
 nav .logo:hover {
     background: #00000070;
     border-radius: 5px;
@@ -72,9 +72,15 @@ nav .logo:hover {
     gap: var(--hamburger-gap);
 
     width: max-content;
-    margin: var(--hamburger-margin);
+    margin: calc(var(--hamburger-margin) );
     z-index: 4;
     cursor: pointer;
+}
+
+/* Make hamburger menu more transparent when hovered */
+.hamburger-menu:hover {
+    opacity: 0.7;
+    transition: 0.5s;
 }
 
 /* Setup hamburger menu with bars before and after the checkbox */
@@ -171,8 +177,10 @@ nav .logo:hover {
     position: fixed;
     width: 500vw;
     height: 500vh;
-    z-index: 0;
+    z-index: 1;
     background-color: #111111;
+
+    cursor: pointer;
 
     /* These values will be changed when sidebar opens */
     translate: -100%;
