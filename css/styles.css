@@ -14,23 +14,27 @@
 	scroll-behavior: smooth;
 }
 
-/* Style the body */
-body {
-    font-family: Tahoma, "Trebuchet MS", sans-serif;
-    margin: 0;
-    padding: 0;
+html {
+    /* Set rem font size for rest of page (16px is default) */
+    font-size: 16;
 }
 
-h1 {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 3rem;
-    letter-spacing: 0.3rem;
+/* Style the body */
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Tahoma, "Trebuchet MS", sans-serif;
 }
 
 main {
     overflow: auto;
     align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* Header for Home Page */
@@ -52,9 +56,10 @@ main {
 
 /* Increase the font size of the heading */
 .header-home h1 {
-    font-size: 6vw;
     margin: 0;
-    padding: none;
+
+    font-size: 6vw;
+    text-transform: uppercase;
     letter-spacing: 0.4rem;
 }
 
@@ -78,10 +83,10 @@ main {
     left: calc(50vw - var(--font-size) / 2);
 }
 
+/* Make caron solid white when hovered over */
 .caron a:hover {
     opacity: 1;
 }
-
 
 /* Split main body into three columns, using the middle for content */
 .main-body {
@@ -89,32 +94,83 @@ main {
     grid-template-columns: auto 70vw auto;
 }
 
-.center-column {
-    /* filler???? */
-    content:"";
+.main-body h2 {
+    margin: 0;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size: 2rem;
 }
 
-#directory {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-
-    /* Anchor buffer: This Value is dependent on the navbar height in navbar.css */
-    scroll-margin-top: 60px; 
+/* necessary??? */
+.center-column {
+    text-align: center;
 }
 
 .content-block {
     font-size: 1.2rem;
-    padding: 1.5rem 0;
+    padding: 5vh 0;
+}
+
+.content-block.contact-button {
+    margin: 0 0 2vw;
+    padding: 0;
+}
+
+.contact-button button {
+    margin: 0;
+    padding: 1vw 1.5vw;
+    background-color: #222222;
+    border: none;
+    border-radius: 0.3rem;
+    max-width: 80vw;
+
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    cursor: pointer;
+}
+
+.contact-button a {
+    color: white;
+}
+
+.contact-button button:hover {
+    background: #222222AA;
+    transition: 0.2s;
 }
 
 .picture-subtitle {
-    margin: auto;
+    margin: 0;
     padding: 2%;
     text-align: center;
 }
 
+#directory {
+    /* Anchor buffer: This Value is dependent on the navbar height in navbar.css */
+    scroll-margin-top: 60px; 
+
+    display: grid;
+    grid-template-rows: 10vh auto;
+}
+
+.directory-grid {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 33% 33% 33%;
+}
+
+.picture-subtitle a:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
 .picture-subtitle p {
     margin: 0;
+    padding: 2vh 0;
 
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -123,7 +179,7 @@ main {
 }
 
 .picture-subtitle-image {
-    margin: 10%;
+    margin: 0 10%;
     max-width: 80%;
 
     border-radius: 0.5rem;
@@ -131,22 +187,47 @@ main {
 
 /* Footer */
 .footer {
-    padding: 0;
+    margin: 0;
+    padding: 5vw;
     text-align: center;
-    background: #ddd;
+    background: green;
 }
 
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-    .row {   
-        flex-direction: column;
-    }
+.footer h2 {
+    margin: 0;
 }
 
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-    .navbar a {
-        float: none;
-        width: 100%;
+
+/* MEDIA QUERIES */
+
+/* Change layout for mobile layouts */
+@media (max-width: 600px) {
+
+    /* Change rem font size for mobile */
+    html {
+        font-size: 16px;
     }
+
+    /* Give body more space in center*/
+    .main-body {
+        grid-template-columns: auto 80vw auto;
+    }
+
+    /* Change directory boxes to grid in rows, not columns */
+    .directory-grid {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 100%;
+    }
+
+}
+
+/* Change layout for HD monitors */
+@media (min-width: 2000px) {
+
+    /* Change rem font size for HD */
+    html {
+        font-size: 1vw;
+    }
+
 }
