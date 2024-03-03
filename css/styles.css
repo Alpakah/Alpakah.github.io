@@ -107,8 +107,8 @@ a {
 
     position: absolute;
     left: 50%;
-    top: 40%;
-    transform: translate(-50%, 0);
+    top: 45%;
+    transform: translate(-50%, -50%);
 }
 
 /* Make caron solid white when hovered over */
@@ -118,7 +118,7 @@ a {
 
 /* Position caron at bottom of header image specifically for home page */
 #home-page .caron a{
-    top: 90%;
+    top: 95%;
 }
 
 /* Split main body into three columns, using the middle for content */
