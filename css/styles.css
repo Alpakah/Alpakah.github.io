@@ -103,10 +103,12 @@ a {
     text-decoration: none;
     font-weight: bold;
 
-    font-size: 5rem;
+    font-size: 3rem;
 
     position: absolute;
+    left: 50%;
     bottom: 50vh;
+    transform: translate(-50%, 0);
 }
 
 /* Make caron solid white when hovered over */
