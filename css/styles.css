@@ -143,15 +143,15 @@ a {
 
 .content-block {
     font-size: 1.2rem;
-    padding: 5vh 0;
+    padding: 0;
 }
 
-.content-block.contact-button {
+.content-block.button {
     margin: 0 0 2vw;
     padding: 0;
 }
 
-.contact-button button {
+.button button {
     margin: 0;
     padding: 1rem 2rem;
     background-color: #222222;
@@ -167,11 +167,11 @@ a {
     cursor: pointer;
 }
 
-.contact-button a {
+.button a {
     color: white;
 }
 
-.contact-button button:hover {
+.button button:hover {
     background: #222222AA;
     transition: 0.2s;
 }
@@ -184,7 +184,8 @@ a {
 
 .first-block {
     /* Anchor buffer: This Value is dependent on the navbar height in navbar.css */
-    scroll-margin-top: 60px; 
+    scroll-margin-top: 60px;
+    padding-top: 5vh;
 }
 
 #directory {
@@ -218,6 +219,26 @@ a {
     max-width: 80%;
 
     border-radius: 0.5rem;
+}
+
+#contact-me iframe {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 800px;
+    border: none;
+}
+
+.pdf-image {
+    width: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+.resume-image {
+    padding: 0;
 }
 
 /* Footer */
@@ -254,7 +275,7 @@ a {
 
     /* Give body more space in center*/
     .main-body {
-        grid-template-columns: auto 80vw auto;
+        grid-template-columns: auto 90vw auto;
     }
 
     /* Change directory boxes to grid in rows, not columns */
@@ -262,6 +283,11 @@ a {
         display: grid;
         grid-template-rows: auto auto auto;
         grid-template-columns: 100%;
+    }
+
+    #contact-me iframe {
+        height: 900px;
+        overflow-x: hidden;
     }
 
 }
