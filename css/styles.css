@@ -107,7 +107,7 @@ a {
 
     position: absolute;
     left: 50%;
-    bottom: 50vh;
+    top: 40%;
     transform: translate(-50%, 0);
 }
 
@@ -118,7 +118,7 @@ a {
 
 /* Position caron at bottom of header image specifically for home page */
 #home-page .caron a{
-    bottom: 0;
+    top: 90%;
 }
 
 /* Split main body into three columns, using the middle for content */
