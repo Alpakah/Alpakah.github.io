@@ -37,6 +37,10 @@ a {
     color: black;
 }
 
+p {
+    margin: 0;
+}
+
 .header-block {
     background-repeat: no-repeat;
     background-position: center top;
@@ -71,30 +75,9 @@ a {
 
 /* Header for Home Page */
 .header-block#home-page {
-    background-image: url(/images/alex_royce.png);
 
     height: 100vh;
     padding: 40vh 0;
-}
-
-/* Header image for About Me Page */
-#about-me {
-    background-image: url(/images/alex_royce.png);
-}
-
-/* Header image for Contact Page */
-#contact {
-    background-image: url(/images/alex_royce.png);
-}
-
-/* Header image for Projects Page */
-#projects {
-    background-image: url(/images/alex_royce.png);
-}
-
-/* Header image for Resume Page */
-#resume {
-    background-image: url(/images/alex_royce.png);
 }
 
 .caron a {
@@ -129,16 +112,12 @@ a {
 
 .main-body h2 {
     margin: 0;
+    padding: 2rem 0;
     display: block;
     text-align: center;
     text-transform: uppercase;
 
     font-size: 2rem;
-}
-
-/* necessary??? */
-.center-column {
-    text-align: center;
 }
 
 .content-block {
@@ -149,6 +128,7 @@ a {
 .content-block.button {
     margin: 0 0 2vw;
     padding: 0;
+    text-align: center;
 }
 
 .button button {
@@ -182,10 +162,68 @@ a {
     text-align: center;
 }
 
-.first-block {
+.id-anchor {
     /* Anchor buffer: This Value is dependent on the navbar height in navbar.css */
     scroll-margin-top: 60px;
-    padding-top: 5vh;
+}
+
+/* Picture + Text blocks for main sections */
+.pictext-top {
+    display: grid;
+    grid-template-rows: auto auto;
+    padding-bottom: 2rem;
+}
+
+.pictext-top img {
+    max-height: calc(30vh - 1rem);
+    max-width: 100%;
+    margin: 0 auto 1rem auto;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.pictext-bot {
+    display: grid;
+    grid-template-rows: auto auto;
+    padding-bottom: 2rem;
+}
+
+.pictext-bot img {
+    max-height: calc(30vh - 1rem);
+    max-width: 100%;
+    margin: 1rem auto 0 auto;
+    border-radius: 0.5rem;
+    display: block;
+}
+
+.pictext-left {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    padding-bottom: 2rem;
+}
+
+.pictext-left img {
+    max-height: 100%;
+    max-width: calc(30vw - 1rem);
+    margin: 0 1rem 0 0;
+    border-radius: 0.5rem;
+    display: inline;
+}
+
+.pictext-right {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+    padding-bottom: 2rem;
+}
+
+.pictext-right img {
+    max-height: 100%;
+    max-width: calc(30vw - 1rem);
+    margin: 0 0 0 1rem;
+    border-radius: 0.5rem;
+    display: inline;
 }
 
 #directory {
@@ -221,6 +259,20 @@ a {
     border-radius: 0.5rem;
 }
 
+#project-categories p {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    letter-spacing: 0.2rem;
+    border-radius: 1rem;
+}
+
+#project-categories p:hover {
+    background: #22222230;
+    transition: 0.3s;
+}
+
 #contact-me iframe {
     margin: 0;
     padding: 0;
@@ -239,11 +291,13 @@ a {
 
 .resume-image {
     padding: 0;
+    text-align: center;
 }
 
 /* Footer */
 .footer {
     margin: 0;
+    margin-top: 2rem;
     padding: 1vh;
     background: #222222;
 
@@ -275,7 +329,8 @@ a {
 
     /* Give body more space in center*/
     .main-body {
-        grid-template-columns: auto 90vw auto;
+        grid-template-columns: auto 80vw auto;
+        text-align: justify;
     }
 
     /* Change directory boxes to grid in rows, not columns */
@@ -288,6 +343,34 @@ a {
     #contact-me iframe {
         height: 900px;
         overflow-x: hidden;
+    }
+
+    /* Change pictext-left and pictext-right to adjust for mobile */
+    
+    /* pictext-left will change to .pixtext-top */
+    .pictext-left {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+    
+    .pictext-left img {
+        max-height: calc(30vh - 1rem);
+        max-width: 100%;
+        margin: 0 auto 1rem auto;
+        display: block;
+    }
+    
+    /* pictext-right will change to .pixtext-bot */
+    .pictext-right {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+    
+    .pictext-right img {
+        max-height: calc(30vh - 1rem);
+        max-width: 100%;
+        margin: 1rem auto 0 auto;
+        display: block;
     }
 
 }
