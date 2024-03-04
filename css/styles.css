@@ -162,6 +162,12 @@ p {
     text-align: center;
 }
 
+.picture-subtitle img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+}
+
 .id-anchor {
     /* Anchor buffer: This Value is dependent on the navbar height in navbar.css */
     scroll-margin-top: 60px;
@@ -235,6 +241,12 @@ p {
     display: grid;
     grid-template-rows: 100%;
     grid-template-columns: 33% 33% 33%;
+}
+
+.img-square {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
 }
 
 .picture-subtitle a:hover {
@@ -343,6 +355,10 @@ p {
     #contact-me iframe {
         height: 900px;
         overflow-x: hidden;
+    }
+
+    #contact + .main-body {
+        grid-template-columns: auto 95vw auto;
     }
 
     /* Change pictext-left and pictext-right to adjust for mobile */
