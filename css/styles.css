@@ -17,6 +17,7 @@
 html {
     /* Set rem font size for rest of page (16px is default) */
     font-size: 16;
+    text-align: justify;
 }
 
 /* Style the body */
@@ -54,8 +55,8 @@ p {
     z-index: -1;
 
     /* Set size of header image default (except home page) */
-    height: 50vh;
-    padding: 20vh 0;
+    height: 60vh;
+    padding: 25vh 0;
 }
 
 /* Increase the font size of the heading */
@@ -90,7 +91,7 @@ p {
 
     position: absolute;
     left: 50%;
-    top: 45%;
+    top: 55%;
     transform: translate(-50%, -50%);
 }
 
@@ -211,8 +212,8 @@ p {
 
 .pictext-left img {
     max-height: 100%;
-    max-width: calc(30vw - 1rem);
-    margin: 0 1rem 0 0;
+    max-width: calc(35vw - 2rem);
+    margin: 0 2rem 0 0;
     border-radius: 0.5rem;
     display: inline;
 }
@@ -226,8 +227,8 @@ p {
 
 .pictext-right img {
     max-height: 100%;
-    max-width: calc(30vw - 1rem);
-    margin: 0 0 0 1rem;
+    max-width: calc(35vw - 2rem);
+    margin: 0 0 0 2rem;
     border-radius: 0.5rem;
     display: inline;
 }
@@ -342,7 +343,6 @@ p {
     /* Give body more space in center*/
     .main-body {
         grid-template-columns: auto 80vw auto;
-        text-align: justify;
     }
 
     /* Change directory boxes to grid in rows, not columns */
@@ -361,6 +361,11 @@ p {
         grid-template-columns: auto 95vw auto;
     }
 
+}
+
+/* Change layout of pictext blocks for mobile/tablet transitional sizes */
+@media (max-width: 1000px) {
+
     /* Change pictext-left and pictext-right to adjust for mobile */
     
     /* pictext-left will change to .pixtext-top */
@@ -372,7 +377,7 @@ p {
     .pictext-left img {
         max-height: calc(30vh - 1rem);
         max-width: 100%;
-        margin: 0 auto 1rem auto;
+        margin: 1rem auto 1rem auto;
         display: block;
     }
     
@@ -388,7 +393,6 @@ p {
         margin: 1rem auto 0 auto;
         display: block;
     }
-
 }
 
 /* Change layout for HD monitors */
