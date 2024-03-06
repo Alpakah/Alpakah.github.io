@@ -197,6 +197,7 @@ p {
     padding-bottom: 2rem;
 }
 
+/* Default size for all images in .pictext-top and .pictext-bot */
 .pictext-top img,
 .pictext-bot img {
     max-height: calc(35vh - 1rem);
@@ -216,8 +217,8 @@ p {
 
 .pictext-left img,
 .pictext-right img {
-    max-height: 100%;
-    max-width: calc(35vw - 2rem);
+    max-height: 50vh;
+    max-width: calc(100% - 2rem);
     border-radius: 0.5rem;
 }
 
@@ -236,23 +237,25 @@ p {
     display: block;
 }
 
-/* For groups of images that will stay inline */
+/* For 2 images (MAX!) that will stay inline */
 .pictext-img-hard-inline {
     display: inline-flex;
     justify-content: center;
 }
 
 .pictext-img-hard-inline img {
-    margin: auto 1rem;
-
-    height: auto;
-    width: 100%;
+    margin: 1rem 0.5rem 0;
+    max-width: calc(50% - 1rem);
 }
 
-/* For groups of images that transition from inline to block for mobile */
+/* For 2 images (MAX!) that transition from inline to block for mobile */
 .pictext-img-soft-inline {
     display: inline-flex;
     justify-content: center;
+}
+
+.pictext-img-soft-inline img {
+    margin: 1rem 0.5rem 0;
 }
 
 #directory {
@@ -411,7 +414,7 @@ p {
         display: flex;
     }
 
-    /* Adjust groups of images so they change to block from inline */
+    /* Adjust  2 images (MAX!) so they change to block from inline */
     .pictext-img-soft-inline {
         display: block;
         text-align: center;
