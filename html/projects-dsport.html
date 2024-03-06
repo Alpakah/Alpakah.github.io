@@ -1,0 +1,159 @@
+<!-- 
+    Author: Alexander Pak
+    Last Updated: 3/5/24
+    This is the Portfolio website for Alexander Pak
+
+    Project: DSport Page
+-->
+
+<!-- Blank Comment Below -->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Define the character set used -->
+    <meta charset="UTF-8">
+    <!-- Author of the HTML code -->
+    <meta name="author" content="Alexander Pak">
+
+    <!-- Link to Generic Style Sheet -->
+    <link rel="stylesheet" href="\css\styles.css">
+    <!-- Link to Navbar Style Sheet -->
+    <link rel="stylesheet" href="\css\navbar.css">
+
+    <!-- Import jQuery -->
+    <script src="\js\jquery-3.7.1.min.js"></script>
+    
+    <!-- Title of the Website that shows on tab -->
+    <title>Alexander Pak | Work: DSport</title>
+    <!-- Favicon Icon that shows on tab -->
+    <link rel="icon" type="image/x-icon" href="\images\favicon.ico">
+    <!-- Description that shows up in google search -->
+    <meta name="description" content="Alexander Pak Portfolio Website">
+
+</head>
+<body>
+
+    <nav id="nav-bar">
+        
+        <label class="hamburger-menu">
+            <input id="hamburger-check" type="checkbox"/>
+        </label>
+
+        <aside class="sidebar">
+            <nav>
+                <a href="\html\about-me.html">About Me</a>
+                <a href="\html\projects.html">Projects</a>
+                <a href="\html\resume.html">R&eacutesum&eacute</a>
+                <a href="\html\contact.html">Contact</a>
+            </nav>
+        </aside>
+
+        <!-- Logo in the top left -->
+        <a href="/" class="logo">Alexander Pak</a>
+
+        <!-- Empty div to dim page when sidebar is open --> 
+        <div id="page-dim"></div>
+
+    </nav>
+
+    <main>
+
+        <header id="projects" class="header-block"
+        style="background-image: url(/images/dsport_car.png);"
+        title="DSport Header Image">
+
+            <h1>DSport Magazine</h1>
+
+            <!-- Div for caron symbol to scroll to main body -->
+            <div class="caron">
+                <a href="#project-top">&#8681</a>
+            </div>
+
+        </header>
+
+        <!-- Main text section after title header -->
+        <div class="main-body">
+
+            <!-- Blank div for spacing -->
+            <div></div>
+
+            <!-- Middle div is for centered content -->
+            <div class="center-column">
+
+                <div id="project-top" class="content-block id-anchor">
+
+                    <h3><b>DSport Magazine</b> | Fountain Valley, CA</h3>
+
+                    <div class="pictext-bot">
+                    
+                        <div>
+                            <p>
+                                DSport Magazine is a company that writes articles on
+                                automobile performance, and during my time with them from
+                                June to September of 2022, I got to work with the manufacturing
+                                team at this summer internship to machine car engines to
+                                improve efficiency as well as develop new skills with
+                                manual and CNC machining alike.
+                                <br><br>
+                                The 
+                            </p>
+                        </div>
+
+                        <div class="pictext-img-hard-inline">
+                            <img src="\images\squaring_metal_1.png"
+                            alt="Large plate of metal squared off">
+                            <img src="\images\squaring_metal_2.png"
+                            alt="Rectangular prism of metal squared off">
+                        </div>
+
+                    </div>
+
+                    <div class="pictext-bot">
+                    
+                        <div>
+                            <p>
+                                One of the operations used by the company is to increase the cross
+                                sectional area of two different cylinder head channels in an engine:
+                                those that lead from the intake manifold and those that exit to the
+                                exhaust manifold. To do this, I used a CNC probe and scanning tools
+                                to map out the exact outline of a manifold gasket. This outline then
+                                sets the path for the CNC router, for which the conversational G-Code
+                                cut within 0.0005" precision.
+                            </p>
+                        </div>
+
+                        <div class="pictext-img">
+                            <img src="\images\dsport_machining.gif"
+                            alt="Engine manifold machining GIF with 4 axis CNC">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <!-- Blank div for spacing -->
+            <div></div>
+
+        </div>
+
+    </main>
+
+    <div class="footer">
+        <a href="https://github.com/Alpakah/Alpakah.github.io" target="_blank">
+            <p>This website is hosted on GitHub Pages</p>
+        </a>
+    </div>
+
+    <!-- Link to Javascript Sheets -->
+    <script src="\js\script.js"></script>
+    <script src="\js\navbar.js"></script>
+
+</body>
+</html>

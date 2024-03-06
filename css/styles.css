@@ -61,7 +61,7 @@ p {
 
 /* Increase the font size of the heading */
 .header-block h1 {
-    margin: 0;
+    margin: 0 10vw;
 
     font-size: 6vw;
     text-transform: uppercase;
@@ -78,7 +78,7 @@ p {
 .header-block#home-page {
 
     height: 100vh;
-    padding: 40vh 0;
+    padding: 40vh 5vw;
 }
 
 .caron a {
@@ -119,6 +119,17 @@ p {
     text-transform: uppercase;
 
     font-size: 2rem;
+}
+
+.main-body h3 {
+    margin: 0;
+    padding: 2rem 0;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+
+    font-size: 2rem;
+    font-weight: normal;
 }
 
 .content-block {
@@ -174,50 +185,28 @@ p {
     scroll-margin-top: 60px;
 }
 
-/* Picture + Text blocks for main sections */
-.pictext-top {
-    display: grid;
-    grid-template-rows: auto auto;
-    padding-bottom: 2rem;
-}
+/*
+    Picture + Text blocks for main sections
+*/
 
-.pictext-top img {
-    max-height: calc(30vh - 1rem);
-    max-width: 100%;
-    margin: 0 auto 1rem auto;
-    border-radius: 0.5rem;
-    display: block;
-}
-
+/* Group of pictures and text in block format */
+.pictext-top,
 .pictext-bot {
     display: grid;
     grid-template-rows: auto auto;
     padding-bottom: 2rem;
 }
 
+.pictext-top img,
 .pictext-bot img {
-    max-height: calc(30vh - 1rem);
+    max-height: calc(35vh - 1rem);
     max-width: 100%;
-    margin: 1rem auto 0 auto;
+    margin: 1rem auto;
     border-radius: 0.5rem;
-    display: block;
 }
 
-.pictext-left {
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: auto auto;
-    padding-bottom: 2rem;
-}
-
-.pictext-left img {
-    max-height: 100%;
-    max-width: calc(35vw - 2rem);
-    margin: 0 2rem 0 0;
-    border-radius: 0.5rem;
-    display: inline;
-}
-
+/* Group of pictures and text in inline format */
+.pictext-left,
 .pictext-right {
     display: grid;
     grid-template-rows: auto;
@@ -225,12 +214,45 @@ p {
     padding-bottom: 2rem;
 }
 
+.pictext-left img,
 .pictext-right img {
     max-height: 100%;
     max-width: calc(35vw - 2rem);
-    margin: 0 0 0 2rem;
     border-radius: 0.5rem;
-    display: inline;
+}
+
+/* Give images on the left some margin on right */
+.pictext-left img {
+    margin: 0 2rem 0 0;
+}
+
+/* Give images on the right some margin on left */
+.pictext-right img {
+    margin: 0 0 0 2rem;
+}
+
+/* For single images in the pictext groups */
+.pictext-img img {
+    display: block;
+}
+
+/* For groups of images that will stay inline */
+.pictext-img-hard-inline {
+    display: inline-flex;
+    justify-content: center;
+}
+
+.pictext-img-hard-inline img {
+    margin: auto 1rem;
+
+    height: auto;
+    width: 100%;
+}
+
+/* For groups of images that transition from inline to block for mobile */
+.pictext-img-soft-inline {
+    display: inline-flex;
+    justify-content: center;
 }
 
 #directory {
@@ -343,7 +365,7 @@ p {
 
     /* Change rem font size for mobile */
     html {
-        font-size: 16px;
+        font-size: 12px;
     }
 
     /* Give body more space in center*/
@@ -373,31 +395,26 @@ p {
 @media (max-width: 1000px) {
 
     /* Change pictext-left and pictext-right to adjust for mobile */
-    
     /* pictext-left will change to .pixtext-top */
-    .pictext-left {
-        grid-template-rows: auto auto;
-        grid-template-columns: auto;
-    }
-    
-    .pictext-left img {
-        max-height: calc(30vh - 1rem);
-        max-width: 100%;
-        margin: 1rem auto 1rem auto;
-        display: block;
-    }
-    
     /* pictext-right will change to .pixtext-bot */
+    .pictext-left,
     .pictext-right {
         grid-template-rows: auto auto;
         grid-template-columns: auto;
     }
     
+    .pictext-left img,
     .pictext-right img {
-        max-height: calc(30vh - 1rem);
+        max-height: calc(35vh - 1rem);
         max-width: 100%;
-        margin: 1rem auto 0 auto;
+        margin: 1rem auto 1rem auto;
+        display: flex;
+    }
+
+    /* Adjust groups of images so they change to block from inline */
+    .pictext-img-soft-inline {
         display: block;
+        text-align: center;
     }
 }
 
