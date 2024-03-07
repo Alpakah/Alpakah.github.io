@@ -1,0 +1,188 @@
+<!-- 
+    Author: Alexander Pak
+    Last Updated: 3/6/24
+    This is the Portfolio website for Alexander Pak
+
+    Project Personal: Dodgeball Trophy Page
+-->
+
+<!-- Blank Comment Below -->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Define the character set used -->
+    <meta charset="UTF-8">
+    <!-- Author of the HTML code -->
+    <meta name="author" content="Alexander Pak">
+
+    <!-- Link to Generic Style Sheet -->
+    <link rel="stylesheet" href="\css\styles.css">
+    <!-- Link to Navbar Style Sheet -->
+    <link rel="stylesheet" href="\css\navbar.css">
+
+    <!-- Import jQuery -->
+    <script src="\js\jquery-3.7.1.min.js"></script>
+    
+    <!-- Title of the Website that shows on tab -->
+    <title>Alexander Pak | Personal: Dodgeball Trophy</title>
+    <!-- Favicon Icon that shows on tab -->
+    <link rel="icon" type="image/x-icon" href="\images\favicon.ico">
+    <!-- Description that shows up in google search -->
+    <meta name="description" content="Alexander Pak Portfolio Website">
+
+</head>
+<body>
+
+    <nav id="nav-bar">
+        
+        <label class="hamburger-menu">
+            <input id="hamburger-check" type="checkbox"/>
+        </label>
+
+        <aside class="sidebar">
+            <nav>
+                <a href="\html\about-me.html">About Me</a>
+                <a href="\html\projects.html">Projects</a>
+                <a href="\html\resume.html">R&eacutesum&eacute</a>
+                <a href="\html\contact.html">Contact</a>
+            </nav>
+        </aside>
+
+        <!-- Logo in the top left -->
+        <a href="/" class="logo">Alexander Pak</a>
+
+        <!-- Empty div to dim page when sidebar is open --> 
+        <div id="page-dim"></div>
+
+    </nav>
+
+    <main>
+
+        <header id="projects" class="header-block"
+        style="background-image: url(/images/dodgeball_winners.png);"
+        title="Dodgeball Trophy Header Image">
+
+            <h1>Dodgeball Trophy</h1>
+            <p>For the annual UCLA Engineering Dodgeball Tournament in 2023</p>
+
+            <!-- Div for caron symbol to scroll to main body -->
+            <div class="caron">
+                <a href="#project-top">&#8681</a>
+            </div>
+
+        </header>
+
+        <!-- Main text section after title header -->
+        <div class="main-body">
+
+            <!-- Blank div for spacing -->
+            <div></div>
+
+            <!-- Middle div is for centered content -->
+            <div class="center-column">
+
+                <div id="project-top" class="content-block id-anchor">
+
+                    <h3><b>The Dodgeball Trophy</b> | UCLA (2023)</h3>
+
+                    <div class="pictext-left">
+
+                        <div class="pictext-img">
+                            <img src="\images\dodgeball_trophy_cad.png"
+                            alt="Dodgeball Trophy CAD">
+                        </div>
+                    
+                        <div>
+                            <p>
+                                In 2022, I served as the Social Director for the UCLA Student Chapter
+                                of the American Society of Mechanical Engineers (ASME), where I organized
+                                a Dodgeball Tournament between all of the engineering organizations
+                                at UCLA to duke it out to determine which organization reigned supreme.
+                                After passing the torch to the following Social Directors, my hands were free
+                                to create a permanent trophy to be presented to the winners of the tournament
+                                and also to participate to try and win my own prize.
+                                <br><br>
+                                In homage to the 2004 film "Dodgeball: A True Underdog Story", we handed out
+                                the club's largest wrench to serve as the prize for the 2022 champions because
+                                "If you can dodge a wrench, you can dodge a ball!" The following year in 2023,
+                                I wanted to provide a trophy that an org would be proud to showcase in their
+                                labspace and boast to the other campus organizations.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="pictext-top">
+                    
+                        <div>
+                            <p>
+                                The trophy is comprised of two components, the base and the hand:
+                                <br><br>
+                                The base is composed of laser cut 3/16 inch plywood assembled into a
+                                box shape. What is hidden on the interior is a series of 3D printed joints
+                                that not only provide the wood more surface area to adhere onto, but also
+                                a spot for threaded inserts to lie so that the front panel can easily be
+                                removed via fasteners when it comes time to replace the panel for a new
+                                year of competition. In regards to the front panel, it is a 1/8 thick piece
+                                of acrylic that is laser cut and engraved with text.
+                                <br><br>
+                                For the hand, I found a free-use model of a hand in the shape of a
+                                fist to use for the trophy. Then, to create space for the wrench to
+                                sit in the fist, I hollowed out the center of the fist with the negative
+                                space created by a representative wrench in the CAD. The knuckles were
+                                then split apart from the palm and wrist to allow the wrench to go in
+                                and can be re-attached with countersunk fasteners. And to prevent
+                                the wrench from slipping out of the hand, a few layers of tape are
+                                hidden in the palm of the hand to provide more friction and compression
+                                onto the wrench from the clamping force of the fasteners in the knuckle.
+                            </p>
+                        </div>
+
+                        <div class="pictext-img-soft-inline">
+                            <img src="\images\dodgeball_trophy_top.png"
+                            alt="Dodgeball Trophy CAD Top-Back View">
+                            <img src="\images\dodgeball_trophy_section.png"
+                            alt="Dodgeball Trophy CAD Section View">
+                            <img src="\images\dodgeball_trophy_bot.png"
+                            alt="Dodgeball Trophy CAD Back-Front View">
+                        </div>
+
+                    </div>
+
+                    <div class="pictext-top">
+
+                        <div class="pictext-img">
+                            <img src="\images\dodgeball_trophy_finished.png"
+                            alt="Dodgeball Trophy Assembled">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <!-- Blank div for spacing -->
+            <div></div>
+
+        </div>
+
+    </main>
+
+    <div class="footer">
+        <a href="https://github.com/Alpakah/Alpakah.github.io" target="_blank">
+            <p>This website is hosted on GitHub Pages</p>
+        </a>
+    </div>
+
+    <!-- Link to Javascript Sheets -->
+    <script src="\js\script.js"></script>
+    <script src="\js\navbar.js"></script>
+
+</body>
+</html>
