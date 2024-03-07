@@ -1,0 +1,198 @@
+<!-- 
+    Author: Alexander Pak
+    Last Updated: 3/6/24
+    This is the Portfolio website for Alexander Pak
+
+    Project Combat Robotics Page
+-->
+
+<!-- Blank Comment Below -->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Define the character set used -->
+    <meta charset="UTF-8">
+    <!-- Author of the HTML code -->
+    <meta name="author" content="Alexander Pak">
+
+    <!-- Link to Generic Style Sheet -->
+    <link rel="stylesheet" href="\css\styles.css">
+    <!-- Link to Navbar Style Sheet -->
+    <link rel="stylesheet" href="\css\navbar.css">
+
+    <!-- Import jQuery -->
+    <script src="\js\jquery-3.7.1.min.js"></script>
+    
+    <!-- Title of the Website that shows on tab -->
+    <title>Alexander Pak | Schoool: Combat Robotics</title>
+    <!-- Favicon Icon that shows on tab -->
+    <link rel="icon" type="image/x-icon" href="\images\favicon.ico">
+    <!-- Description that shows up in google search -->
+    <meta name="description" content="Alexander Pak Portfolio Website">
+
+</head>
+<body>
+
+    <nav id="nav-bar">
+        
+        <label class="hamburger-menu">
+            <input id="hamburger-check" type="checkbox"/>
+        </label>
+
+        <aside class="sidebar">
+            <nav>
+                <a href="\html\about-me.html">About Me</a>
+                <a href="\html\projects.html">Projects</a>
+                <a href="\html\resume.html">R&eacutesum&eacute</a>
+                <a href="\html\contact.html">Contact</a>
+            </nav>
+        </aside>
+
+        <!-- Logo in the top left -->
+        <a href="/" class="logo">Alexander Pak</a>
+
+        <!-- Empty div to dim page when sidebar is open --> 
+        <div id="page-dim"></div>
+
+    </nav>
+
+    <main>
+
+        <header id="projects" class="header-block"
+        style="background-image: url(/images/cr_alex_lucas.png);"
+        title="Combat Robotics Header Image">
+
+            <h1>Combat Robotics</h1>
+            <p>Sabertooth (3 lb) | Slap&GO (1 lb)</p>
+
+            <!-- Div for caron symbol to scroll to main body -->
+            <div class="caron">
+                <a href="#project-top">&#8681</a>
+            </div>
+
+        </header>
+
+        <!-- Main text section after title header -->
+        <div class="main-body">
+
+            <!-- Blank div for spacing -->
+            <div></div>
+
+            <!-- Middle div is for centered content -->
+            <div class="center-column">
+
+                <div id="project-top" class="content-block id-anchor">
+
+                    <h3><b>Sabertooth</b> | UCLA (2022)</h3>
+
+                    <div class="pictext-left">
+
+                        <div class="pictext-img-hard-inline">
+                            <img src="\images\sabertooth.png"
+                            alt="Sabertooth CAD Model">
+                        </div>
+                    
+                        <div>
+                            <p>
+                                Sabertooth is the name for my Beetleweight (3 lb) Combat
+                                Robot. For reference, combat robotics are a clash between
+                                bots similar to the TV series "Battlebots&#8482;". Where as
+                                the TV series fights at the heavyweight division listed at
+                                250 lbs, the general combat robotics scene across the world
+                                has a number of weight classes.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="pictext-right">
+                    
+                        <div>
+                            <p>
+                                This project was also my first exposure to so many different
+                                skills: manual machining, 3D printing, soldering, and harnessing.
+                            </p>
+                        </div>
+
+                        <div class="pictext-img-hard-inline">
+                            <img src="\images\sabertooth_weapon.png"
+                            alt="Sabertooth Weapon Machined">
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <h3><b>Slap&Go</b> | UCLA, 2022</h3>
+
+                    <div class="pictext-bot">
+                    
+                        <div>
+                            <p>
+                                Slap&Go is an Antwieght (1 lb) Combat Robot that I built for
+                                a 10 week long class at UCLA. 
+                            </p>
+                        </div>
+
+                        <div class="pictext-img-soft-inline">
+                            <img src="\images\slap_assy.png"
+                            alt="Slap&Go Combat Robot fully assembled without armor or weapons">
+                            <img src="\images\slap_armored.png"
+                            alt="Slap&Go Combat Robot fully assembled with armor and weapons">
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Below is a (rather fun) demonstration of Slap&Go's test run, where I replaced
+                        its aluminum weapons with rubber hands... so it can "Slap" then "Go". Sadly its
+                        fun design did not transalte to much success in the cage, as it lost in the first
+                        round of competition. The video for this is also shown below.
+                    </p>
+                    
+                    <div class="content-block">
+                        <iframe class="youtube" width="560px" height="315px"
+                        src="https://www.youtube.com/embed/_zt2SPBV-jk?si=Y2oN6-7Yu2S6FmaW"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                        gyroscope; picture-in-picture; web-share" allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <div class="content-block">
+                        <iframe class="youtube" width="560px" height="315px"
+                        src="https://www.youtube.com/embed/9ft7z4fEBMw?si=PggkwUssprPi0Lyt"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                        gyroscope; picture-in-picture; web-share" allowfullscreen>
+                        </iframe>
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <!-- Blank div for spacing -->
+            <div></div>
+
+        </div>
+
+    </main>
+
+    <div class="footer">
+        <a href="https://github.com/Alpakah/Alpakah.github.io" target="_blank">
+            <p>This website is hosted on GitHub Pages</p>
+        </a>
+    </div>
+
+    <!-- Link to Javascript Sheets -->
+    <script src="\js\script.js"></script>
+    <script src="\js\navbar.js"></script>
+
+</body>
+</html>

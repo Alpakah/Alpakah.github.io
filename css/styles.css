@@ -340,6 +340,14 @@ p {
     text-align: center;
 }
 
+.vertical-video {
+    height: 60vh;
+    width: auto;
+    display: flex;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+}
+
 .youtube {
     width: 70vw;
     height: calc(0.5625 * 70vw);

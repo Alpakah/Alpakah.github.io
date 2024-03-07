@@ -1,9 +1,9 @@
 <!-- 
     Author: Alexander Pak
-    Last Updated: 3/5/24
+    Last Updated: 3/6/24
     This is the Portfolio website for Alexander Pak
 
-    Project: DSport Page
+    Project: MAE 263A 5DOF Arm Page
 -->
 
 <!-- Blank Comment Below -->
@@ -29,7 +29,7 @@
     <script src="\js\jquery-3.7.1.min.js"></script>
     
     <!-- Title of the Website that shows on tab -->
-    <title>Alexander Pak | Work: DSport</title>
+    <title>Alexander Pak | School: 5DOF Arm</title>
     <!-- Favicon Icon that shows on tab -->
     <link rel="icon" type="image/x-icon" href="\images\favicon.ico">
     <!-- Description that shows up in google search -->
@@ -64,10 +64,11 @@
     <main>
 
         <header id="projects" class="header-block"
-        style="background-image: url(/images/dsport_car.png);"
-        title="DSport Header Image">
+        style="background-image: url(/images/mae263a_cad.png);"
+        title="MAE 263A Header Image">
 
-            <h1>DSport Magazine</h1>
+            <h1>5 DOF Robotic Manipulator</h1>
+            <p>MAE 263A: Kinematics of Robotics</p>
 
             <!-- Div for caron symbol to scroll to main body -->
             <div class="caron">
@@ -87,32 +88,25 @@
 
                 <div id="project-top" class="content-block id-anchor">
 
-                    <h3><b>DSport Magazine</b> | Fountain Valley, CA (2022)</h3>
+                    <h3><b>5 DOF Robotic Manipulator</b> | UCLA (2022)</h3>
 
                     <div class="pictext-bot">
                     
                         <div>
                             <p>
-                                DSport Magazine is a company that writes articles on
-                                automobile performance, and during my time with them from
-                                June to September of 2022, I got to work with the manufacturing
-                                team at this summer internship to machine car engines to
-                                improve efficiency as well as develop new skills with
-                                manual and CNC machining alike.
-                                <br><br>
-                                I first gained a familiarity with the 4-axis CNC machine manually,
-                                by squaring off plates of Aluminum and Titanium. This not only helped
-                                prepare plates of metal stock to be used for precise fabrication later,
-                                but also gave me an opportinity to learn how the CNC machine operates
-                                and how to reliably set and level stock material in the clamps.
+                                I took MAE 263A: Kinematics of Robotics at UCLA in the
+                                Fall of 2022. This is a graduate-level class that I enrolled
+                                in as an undergraduate, which culminated in a final hands-on
+                                project in which we were tasked to build a minimum 3 Degree of
+                                Freedom (DOF) Robotic Manipulator to accomplish any task.
                             </p>
                         </div>
 
-                        <div class="pictext-img-hard-inline">
-                            <img src="\images\squaring_metal_1.png"
-                            alt="Large sheet of metal squared off">
-                            <img src="\images\squaring_metal_2.png"
-                            alt="Thich plate of metal squared off">
+                        <div class="pictext-img-soft-inline">
+                            <img src="\images\mae263a_cad_exploded.png"
+                            alt="MAE 263A Final CAD, Exploded View">
+                            <img src="\images\mae263a_cad.png"
+                            alt="MAE 263A Final CAD">
                         </div>
 
                     </div>
@@ -121,29 +115,42 @@
                     
                         <div>
                             <p>
-                                DSport expands the size of Nissan RB26 engine cylinder head cam/valve
-                                buckets to increase the flow of fuel and therefore performance. Often,
-                                my task was to take an OEM cylinder head and probe it for the center
-                                locations of every bucket channel and then bore new expanded holes
-                                at said locations. 
+                                The team designed, manufactured, and operated a 5 DOF Robotic Arm
+                                Manipulator that had an additional 1 DOF gripping end effector
+                                to move to the known position of a cup, pick it up while maintaining
+                                its vertical orientation to avoid spilling, and pour its contents
+                                out at a final destination. 
                                 <br><br>
-                                Another common operation used by the company is to increase the cross
-                                sectional area of two different cylinder head channels in an engine:
-                                those that lead from the intake manifold and those that exit to the
-                                exhaust manifold. To do this, I used a CNC probe and scanning tools
-                                to map out the exact outline of a manifold gasket. This outline then
-                                sets the path for the CNC router, for which the conversational G-Code
-                                cut within 0.0005" precision.
+                                I established the DH parameters of the entire
+                                system and created the Forward Kinematic transformation matrix
+                                that would transform angular inputs to the Dynamixel Motors and
+                                output them as spatial coordinates in the base reference frame. I
+                                also designed the 4th and 5th links of the manipulator, as well as
+                                3D printing all of the components out of a nylon filament.
+                                <br><br>
+                                Below there is a video demonstration of the completed manipulator
+                                as well as a presentation going into the details of the
+                                DH Parameters, Forward/Inverse Kinematics, and the design considerations.
                             </p>
-                        </div>
-
-                        <div class="pictext-img">
-                            <img src="\images\dsport_machining.gif"
-                            alt="Engine manifold machining GIF with 4 axis CNC">
                         </div>
 
                     </div>
 
+                </div>
+
+                <div class="content-block">
+                    <video class="vertical-video" controls>
+                        <source src="\videos\mae263a_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="content-block button">
+                    <button>
+                        <a href="\pdf\mae263a_kinematics.pdf" target="_blank">
+                            <b>Presentation on the Kinematics of the 5 DOF Manipulator</b>
+                        </a>
+                    </button>
                 </div>
 
             </div>
