@@ -40,6 +40,7 @@ a {
 
 p {
     margin: 0;
+    font-size: 1.2rem;;
 }
 
 .header-block {
@@ -56,7 +57,7 @@ p {
 
     /* Set size of header image default (except home page) */
     height: 60vh;
-    padding: 25vh 0;
+    padding: 20vh 0;
 }
 
 /* Increase the font size of the heading */
@@ -235,6 +236,7 @@ p {
 /* For single images in the pictext groups */
 .pictext-img img {
     display: block;
+    align-items: center;
 }
 
 /* For 2 images (MAX!) that will stay inline */
@@ -338,6 +340,14 @@ p {
     text-align: center;
 }
 
+.youtube {
+    width: 70vw;
+    height: calc(0.5625 * 70vw);
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    display: flex;
+}
+
 /* Footer */
 .footer {
     margin: 0;
@@ -394,6 +404,11 @@ p {
 
     #contact + .main-body {
         grid-template-columns: auto 95vw auto;
+    }
+
+    .youtube {
+        width: 80vw;
+        height: calc(0.5625 * 80vw);
     }
 
 }

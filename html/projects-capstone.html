@@ -1,0 +1,198 @@
+<!-- 
+    Author: Alexander Pak
+    Last Updated: 2/26/24
+    This is the Portfolio website for Alexander Pak
+
+    Project TEMPLATE Page
+-->
+
+<!-- Blank Comment Below -->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+    <!-- Setting the viewport to make your website look good on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Define the character set used -->
+    <meta charset="UTF-8">
+    <!-- Author of the HTML code -->
+    <meta name="author" content="Alexander Pak">
+
+    <!-- Link to Generic Style Sheet -->
+    <link rel="stylesheet" href="\css\styles.css">
+    <!-- Link to Navbar Style Sheet -->
+    <link rel="stylesheet" href="\css\navbar.css">
+
+    <!-- Import jQuery -->
+    <script src="\js\jquery-3.7.1.min.js"></script>
+    
+    <!-- Title of the Website that shows on tab -->
+    <title>Alexander Pak | School: Capstone</title>
+    <!-- Favicon Icon that shows on tab -->
+    <link rel="icon" type="image/x-icon" href="\images\favicon.ico">
+    <!-- Description that shows up in google search -->
+    <meta name="description" content="Alexander Pak Portfolio Website">
+
+</head>
+<body>
+
+    <nav id="nav-bar">
+        
+        <label class="hamburger-menu">
+            <input id="hamburger-check" type="checkbox"/>
+        </label>
+
+        <aside class="sidebar">
+            <nav>
+                <a href="\html\about-me.html">About Me</a>
+                <a href="\html\projects.html">Projects</a>
+                <a href="\html\resume.html">R&eacutesum&eacute</a>
+                <a href="\html\contact.html">Contact</a>
+            </nav>
+        </aside>
+
+        <!-- Logo in the top left -->
+        <a href="/" class="logo">Alexander Pak</a>
+
+        <!-- Empty div to dim page when sidebar is open --> 
+        <div id="page-dim"></div>
+
+    </nav>
+
+    <main>
+
+        <header id="projects" class="header-block"
+        style="background-image: url(/images/graduation_fountain.png);"
+        title="Capstone Header Image">
+
+            <h1>MAE Senior Capstone: Manuel</h1>
+
+            <!-- Div for caron symbol to scroll to main body -->
+            <div class="caron">
+                <a href="#project-top">&#8681</a>
+            </div>
+
+        </header>
+
+        <!-- Main text section after title header -->
+        <div class="main-body">
+
+            <!-- Blank div for spacing -->
+            <div></div>
+
+            <!-- Middle div is for centered content -->
+            <div class="center-column">
+
+                <div id="project-top" class="content-block id-anchor">
+
+                    <h3><b>MAE Senior Capstone</b> | UCLA</h3>
+
+                    <div class="pictext-left">
+
+                        <div class="pictext-img">
+                            <img src="\images\manuel.png"
+                            alt="Picture of completed capstone project">
+                        </div>
+                    
+                        <div>
+                            <p>
+                                To graduate from the UCLA Samueli School of Engineering with a Bachelor's
+                                Degree in Mechanical Engineering, every student must complete a capstone
+                                course demonstrating all of their theoretical and technical knowledge by
+                                building a functional project. I had the fortune to compelte my capstone
+                                under Dr. Dennis Hong, where students were able to pitch and pursue their
+                                own design for a mechanical assembly to demonstrate engineering skills.
+                                <br><br>
+                                Together as a team of 7 students, I created "Manuel":
+                                <br><br>
+                                Manuel is a manually controlled robot that was designed to perform gestures
+                                with its arm and spell in ASL with its hand. The arm was designed to mimic
+                                the full 7 degrees of freedom that a human arm has. The hand and fingers
+                                were designed to perform finger spelling, applying only enough degrees of
+                                freedom to do so. These objectives were to be completed within 5 months
+                                with a $600 budget plus part donations from the RoMeLa lab. Unfortunately,
+                                these ambitious goals were not fully met. Manuel managed to perform exactly
+                                one gesture with its arm and hand: flipping someone off. 
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="pictext-bot">
+                    
+                        <div>
+                            <p>
+                                I worked on the electrical system of Manuel, determining all the
+                                required voltage and current for all of the electrical components
+                                in the system and then choosing a sufficient power supply to provide
+                                enough power to the entire system without providing too much voltage
+                                or current to each individual component. I was able to re-purpose a
+                                24V power supply from a broken 3D printer and step voltages/currents
+                                down to the required amounts; however, that would end up being
+                                extremely dangerous and produce high amounts of heat. I quickly learned
+                                that sourcing old 5V and 3V power cords would suffice, and I could
+                                splice and solder the wires to Dynamixel motors, Stepper motors,
+                                Arduinos, and LED matrices.
+                                <br><br>
+                                I also 3D printed every single part of Manuel, with both FDM and SLA
+                                printers. Thousands of hours using 3D printers came in handy, and this
+                                task was no problem at all.
+                            </p>
+                        </div>
+
+                        <div class="pictext-img-soft-inline">
+                            <img src="\images\manuel_cad.png"
+                            alt="Manuel CAD in SolidWorks">
+                            <img src="\images\manuel_electronics.png"
+                            alt="Manuel's electrical system'">
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Below is a video compilation of the progress and final demonstration of
+                        Manuel after 14 weeks of design and manufacturing!
+                    </p>
+
+                </div>
+
+                <div class="content-block">
+                    <iframe class="youtube" width="560px" height="315px"
+                    src="https://www.youtube.com/embed/j4762soWRmg?si=XggRlOk8D2IYP29X"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+                    gyroscope; picture-in-picture; web-share" allowfullscreen>
+                    </iframe>
+                </div>
+
+                <div class="content-block button">
+                    <button>
+                        <a href="\pdf\capstone_report.pdf" target="_blank">
+                            <b>Read My Senior Capstone Report</b>
+                        </a>
+                    </button>
+                </div>
+
+            </div>
+            
+            <!-- Blank div for spacing -->
+            <div></div>
+
+        </div>
+
+    </main>
+
+    <div class="footer">
+        <a href="https://github.com/Alpakah/Alpakah.github.io" target="_blank">
+            <p>This website is hosted on GitHub Pages</p>
+        </a>
+    </div>
+
+    <!-- Link to Javascript Sheets -->
+    <script src="\js\script.js"></script>
+    <script src="\js\navbar.js"></script>
+
+</body>
+</html>

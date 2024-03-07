@@ -3,7 +3,6 @@
 */
 
 // Make all title pages image scroll slower then the rest of the page
-
 document.body.onscroll = function slowScroll() {  
     var scrolltotop = document.scrollingElement.scrollTop;
     var target = document.getElementsByClassName("header-block");
@@ -15,3 +14,6 @@ document.body.onscroll = function slowScroll() {
         target[i].style.backgroundPosition = xvalue + " " + yvalue + "px";
     }
 }
+
+// Reduce start of video volume to 25% of original volume
+$("video").prop("volume", 0.1);
