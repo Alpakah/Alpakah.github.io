@@ -246,7 +246,7 @@ p {
 }
 
 .pictext-img-hard-inline img {
-    margin: 1rem 0.5rem 0;
+    margin: 1rem 0.5rem;
     max-width: calc(50% - 1rem);
 }
 
@@ -257,7 +257,7 @@ p {
 }
 
 .pictext-img-soft-inline img {
-    margin: 1rem 0.5rem 0;
+    margin: 1rem 0.5rem;
 }
 
 #directory {

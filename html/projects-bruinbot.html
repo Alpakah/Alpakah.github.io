@@ -90,43 +90,191 @@
 
                     <h3><b>BruinBot</b> | UCLA (2021-2022)</h3>
 
-                    <div class="pictext-bot">
+                    <div class="pictext-right">
                     
                         <div>
                             <p>
-                                THIS PAGE IS STILL IN PROGRESS!!!
+                                X1 Robotics at UCLA is the college's premiere robotics organization.
+                                At the beginning of every year, the team creates ideas and pitches them
+                                to each other, ultimately voting on the single best idea to build over the
+                                next two years with the first year dedicated to R&D and CAD and the second
+                                year dedicated to manufacturing and assembly, integration, and testing (AI&T).
+                                I entered the program as a Junior during the second year of this cycle, where
+                                I manufactured certain components and redesigned others -- In this page I touch
+                                on the subsystems I had direct involvement in re-designing and manufacturing.
                             </p>
                         </div>
 
                         <div class="pictext-img">
-                            <img src="\images\bruinbot_face.gif"
-                            alt="BruinBot Face Animation">
+                            <img src="\images\bruinbot_cad.png"
+                            alt="BruinBot CAD model">
                         </div>
 
                     </div>
 
-                    <div class="pictext-bot">
+                    <hr>
+
+                    <h3>Drivetrain</h3>
+
+                    <div class="pictext-top">
+
+                        <div class="pictext-img-soft-inline">
+                            <img src="\images\bruinbot_cad_drive.png"
+                            alt="BruinBot Drivetrain CAD">
+                            <img src="\images\bruinbot_drive.png"
+                            alt="BruinBot Drivetrain Assembly">
+                        </div>
                     
                         <div>
                             <p>
-                                LED Matrix
+                                BruinBot has a simple but powerful two-wheel tank drivetrain, powered by
+                                two individual VEX Robotics CIM Motors with 30:1 gearboxes attached
+                                to them (one on the left and one on the right) to ensure the drive
+                                operates at a high enough torque to withstand the steep hills of the
+                                UCLA campus. The back wheels feature standard wheels and the front
+                                wheels are omni wheels to allow BruinBot to turn sharper. A chain
+                                connects the motor to the wheels, with a tensioner that slides
+                                horizontally as shown in the diagram above.
+                                <br><br>
+                                Below is a demonstration of BruinBot's two wheel drive:
                             </p>
-                        </div>
-
-                        <div class="pictext-img">
-                            <img src="\images\bruinbot_face.gif"
-                            alt="BruinBot Face Animation">
                         </div>
 
                     </div>
 
-                </div>
-
-                <div class="content-block">
                     <video class="vertical-video" controls>
                         <source src="\videos\bruinbot_test.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
+
+                    <hr>
+
+                    <h3>Head and Face</h3>
+
+                    <div class="pictext-bot">
+                    
+                        <div>
+                            <p>
+                                BruinBot's head is driven by two stepper motors and serves as a
+                                2 Degree of Freedom (DOF) robotic mechanism: the first motor drives
+                                the head's rotation about the midline (vertical "z-axis"), and a
+                                second motor sits within the head and drives its extension and
+                                flexion (the "nodding" motion). If you look closely, the ears of
+                                BruinBot also move even more in relation to the head, which is
+                                driven by a 4 bar linkage within the head's frame.
+                            </p>
+                        </div>
+
+                        <div class="pictext-img-soft-inline">
+                            <img src="\images\bruinbot_cad_head.png"
+                            alt="BruinBot Head CAD">
+                            <img src="\images\bruinbot_head_inside.png"
+                            alt="BruinBot Head Assembly">
+                            <img src="\images\bruinbot_face.gif"
+                            alt="BruinBot Face Animation">
+                        </div>
+
+                    </div>
+
+                    <div class="pictext-bot">
+                    
+                        <div>
+                            <p>
+                                BruinBot's face is powered by an LED Matrix behind "Black LED Acrylic"
+                                so that the face panel appears opaque when unlit, but shows LED light
+                                to pass through from behind. The facial expressions are controlled by
+                                Arduino and cycle over time. The full desired function was to create
+                                a user interface on the screen that would then prompt certain expressions
+                                to appear, but the project did not reach that stage.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <video class="vertical-video" controls>
+                        <source src="\videos\bruinbot_head.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <hr>
+
+                    <h3>Arm and Payload</h3>
+
+                    <div class="pictext-bot">
+                    
+                        <div>
+                            <p>
+                                My personal favorite function of BruinBot was its vending capabilities.
+                                When I entered the project, the vending compartment had already been designed,
+                                intended to be laser cut out of acrylic, but with no real means of assembly.
+                                I redesigned the payload to use a "lock and key" design that would constrain
+                                the assembly while allowing for easy assembly and disassembly. This component
+                                also relied on precise tolerances for the interference fit between the lock
+                                and keys to keep the components in place as the system vibrates.
+                                <br><br>
+                                BruinBot stores snacks in its belly and dispense them like a vending machine
+                                onto a conveyor belt that would feed to the left hand, which would then
+                                rotate upwards to hand it to you. The arm only contains 1 DOF and instead
+                                features a four parallel 4 bar linkage within it so that the hand stays
+                                completely parallel to the ground BruinBot is standing on -- a hand that I
+                                designed myself to give BruinBot a bear-like quality without compromising
+                                its function. I thoroughly enjoy working on both the technical engineering
+                                and artistic design of projects
+                                like these.
+                            </p>
+                        </div>
+
+                        <div class="pictext-img-soft-inline">
+                            <img src="\images\bruinbot_cad_arm.png"
+                            alt="Bruinbot Arm CAD">
+                            <img src="\images\bruinbot_cad_payload.png"
+                            alt="Bruinbot Vending Payload CAD">
+                            <img src="\images\bruinbot_build.png"
+                            alt="Alex assembling the vending payload">
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                    <h3>The End Result</h3>
+
+                    <div class="pictext-left">
+
+                        <div class="pictext-img">
+                            <img src="\images\bruinbot_josephine.png"
+                            alt="BruinBot almost finished with Josephine Bruin">
+                        </div>
+                    
+                        <div>
+                            <p>
+                                This project is by no means completely done by my own self -- the BruinBot
+                                team worked incredibly hard to put this project together from scratch with
+                                zero blueprint from prior years to build on like certain other programs. The
+                                topics covered on this page are all components I redesigned or assembled, but
+                                there are so many other components in this complex project that you can read
+                                about in the full documentation below.
+                                <br><br>
+                                Ultimately, due to the program having a very delayed start in manufacturing
+                                and assembly due to the Covid Pandemic, the project remains unfinished,
+                                just short of being complete. At its current state, BruinBot has a fully
+                                functioning head/face and is capable of driving around. Unfortunately, the
+                                vending system and actuated arm were not fully operational by the conclusion
+                                of the project, but it was incredibly fruitful to see most of the project
+                                become realized from CAD space to assembly!
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="content-block button">
+                        <button>
+                            <a href="\pdf\bruinbot_report_2022.pdf" target="_blank">
+                                <b>BruinBot Technical Design Report</b>
+                            </a>
+                        </button>
+                    </div>
+
                 </div>
 
             </div>
